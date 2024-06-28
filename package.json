@@ -2,7 +2,7 @@
   "name": "gameklub",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Mika21r.github.io/frontend_comp_club",
+  "homepage": "https://Mika21r.github.io/frontend_comp_club/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
