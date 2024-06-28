@@ -1,17 +1,15 @@
 import { useContext, useState, useEffect } from 'react';
 import {observer} from 'mobx-react-lite';
 import './styles/main.css';
-
 import BookingSeats from './pages/bookingSeats/BookingSeats';
 import AdminPanel from './pages/Admin/AdminPanel';
-import Header from './components/header/Header';
 import { Context } from './main';
+import MainPage from './pages/MainPage/MainPage';
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-
 
 const App = observer(() => {
   const {store} = useContext(Context);
@@ -35,7 +33,7 @@ const App = observer(() => {
   createBrowserRouter([
     {
       path: "/",
-      element: <BookingSeats/>
+      element: <MainPage/>
     },
     {
       path: "/home",
@@ -44,14 +42,15 @@ const App = observer(() => {
     {
       path: "/test",
       element: <div>page test!</div>,
+    },
+    {
+      path: "/Auditoriums",
+      element: <BookingSeats/>
     }
   ])
  
-
-  
   return (
     <>
-      <Header/>
       <RouterProvider router={router} />
     </>
     

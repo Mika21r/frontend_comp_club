@@ -18,6 +18,8 @@ const BookingSeat = ({seatData, setBooked}) => {
 
     const [fetchHoursForBooking, HoursForBookingLoader, HoursForBookingError] = useFetching(async () => {
         let response = await HoursForBooking.GetHoursForBookingByDateAndSeatId(choisedDate, seatData.seatId);
+        console.log(choisedDate, seatData.seatId)
+        console.log(response.data)
         setHoursForBooking(response.data);
     });
 

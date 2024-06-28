@@ -1,0 +1,35 @@
+.TariffSection {
+    padding: 120px 180px;
+    margin: 0 auto;
+    position: relative;
+    background: linear-gradient( rgba(0, 0, 0, 0.98), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.98) ), url("/public/tariff_pic.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size:  cover;
+    -o-background-size: cover;
+}
+.Tariff_table table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    margin-top: 60px;
+}
+.Tariff_table td{
+    border-bottom: 1px solid #d91e37;
+    color: #fff;
+    padding: 3px 16px;
+    height: 40px;
+    vertical-align: bottom;
+}
+.TariffSection table thead th{
+    background-color: #d91e37;
+    color: #fff;
+    padding: 3px 16px;
+    height: 40px;
+    vertical-align: middle;
+}
+.TariffSection h1{
+    color: #d91e37;
+    font-size: 48px;
+    font-weight: 500;
+}

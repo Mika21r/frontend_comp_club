@@ -5,6 +5,7 @@ import SignIn from "../SignIn/SignIn";
 import SignUp from "../signUp/SignUp";
 import { Context } from '../../main';
 import OtchetsService from "../../services/OtchetsService";
+import logo from '/public/Logo2.png';
 
 const Header = () => {
     const [showModal, setShowModal] = useState(false);
@@ -44,7 +45,7 @@ const Header = () => {
             <header className="header">
                 <div className="container">
                     <div className="header__row">
-                        <div className="header__logo">Game club</div>
+                        <div className="header__logo"><img src={logo} alt="logo"/></div>
                         {
                             store.isAuth
                             ?
@@ -53,17 +54,16 @@ const Header = () => {
                                  {
                                     (store.isAuth && (store.userRoles.includes("ADMIN") || store.userRoles.includes("OWNER")))
                                     ?
-                                    <button className="btn__sign" onClick={() => otchet()}>Информация о компах</button>
+                                    <button className="btn__sign" onClick={() => otchet()}>Информация о компьютерах</button>
                                     : ""
                                  }
                             </div>
                             :
                             <div className="btn__block">
-                                <button className="sign__in btn__sign" onClick={() => handlerChoise("signin")}>войти</button>
-                                <button className="sign__up btn__sign" onClick={() => handlerChoise("signup")}>зарегистрироваться</button>
+                                <button className="sign__in btn__sign" onClick={() => handlerChoise("signin")}>Войти</button>
+                                <button className="sign__up btn__sign" onClick={() => handlerChoise("signup")}>Зарегистрироваться</button>
                             </div>
                         }
-                        
                     </div>
                 </div>
             </header>
