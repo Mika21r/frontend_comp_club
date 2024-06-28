@@ -5,4 +5,14 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/Mika21r/',
+  build: {
+    outDir: 'dist',
+    rollupOptions: {
+      output: {
+        chunkFileNames: 'assets/index-t265GIMJ.js',
+        entryFileNames: 'assets/index-t265GIMJ.js',
+        assetFileNames: 'assets/index--zP0Rm_t.css'
+      }
+    }
+  }
 })
